@@ -1,0 +1,174 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b1020">
+  <title>AadarshWorld | Domain Test</title>
+  <meta name="description" content="AadarshWorld domain and website connectivity test.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      font-family: system-ui, -apple-system, sans-serif;
+      color: #f1f5f9;
+      background:
+        radial-gradient(ellipse at top, #172554 0%, transparent 60%),
+        #0b1020;
+    }
+
+    main {
+      width: 100%;
+      max-width: 680px;
+      text-align: center;
+      padding: 48px 24px;
+      border: 1px solid #334155;
+      border-radius: 24px;
+      background: rgba(15, 23, 42, 0.85);
+      box-shadow: 0 24px 80px #0005;
+    }
+
+    .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      border: 1px solid #166534;
+      border-radius: 999px;
+      color: #86efac;
+      background: #14532d33;
+      font-size: 13px;
+      margin-bottom: 28px;
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #4ade80;
+    }
+
+    h1 {
+      font-size: clamp(36px, 8vw, 64px);
+      letter-spacing: -2px;
+      line-height: 1.1;
+      margin-bottom: 18px;
+    }
+
+    h1 span {
+      color: #60a5fa;
+    }
+
+    p {
+      color: #94a3b8;
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    .domain {
+      margin: 28px 0;
+      padding: 18px;
+      border-radius: 12px;
+      border: 1px solid #334155;
+      background: #02061780;
+      overflow-wrap: anywhere;
+    }
+
+    .domain small {
+      display: block;
+      color: #64748b;
+      margin-bottom: 8px;
+    }
+
+    .domain strong {
+      font-size: clamp(17px, 4vw, 23px);
+    }
+
+    button {
+      margin-top: 28px;
+      padding: 13px 22px;
+      border: 0;
+      border-radius: 10px;
+      color: white;
+      background: #2563eb;
+      font: inherit;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    button:hover {
+      background: #3b82f6;
+      transform: translateY(-2px);
+    }
+
+    #result {
+      margin-top: 18px;
+      font-size: 14px;
+    }
+
+    footer {
+      margin-top: 36px;
+      font-size: 12px;
+      color: #64748b;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <div class="status">
+      <span class="dot"></span>
+      Static page loaded
+    </div>
+
+    <h1>Aadarsh<span>World</span></h1>
+
+    <p>
+      A personal corner of the internet.<br>
+      Testing a new domain, one step at a time.
+    </p>
+
+    <div class="domain">
+      <small>DOMAIN UNDER TEST</small>
+      <strong>aadarshworld.xyz</strong>
+    </div>
+
+    <p>
+      If you can read this page, the hosting server
+      successfully delivered this HTML document.
+    </p>
+
+    <button id="testButton" type="button">
+      Test JavaScript
+    </button>
+
+    <p id="result" aria-live="polite"></p>
+
+    <footer>
+      HTML · CSS · JavaScript · GitHub Pages
+    </footer>
+  </main>
+
+  <script>
+    const button = document.getElementById("testButton");
+    const result = document.getElementById("result");
+
+    button.addEventListener("click", () => {
+      result.textContent =
+        "JavaScript is working! Your browser executed this code.";
+      button.textContent = "Test Passed ✓";
+    });
+  </script>
+</body>
+</html>
